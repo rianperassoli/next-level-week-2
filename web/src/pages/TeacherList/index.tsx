@@ -15,7 +15,7 @@ const TeacherList = () => {
 
           <Input name="subject" label="Matéria" />
           <Input name="week_day" label="Dia da semana" />
-          <Input name="time" label="Hora" />
+          <Input name="time" label="Hora" type="time" />
 
         </form>
       </PageHeader>
