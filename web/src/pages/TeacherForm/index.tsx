@@ -3,7 +3,8 @@ import React from 'react'
 import PageHeader from '../../components/PageHeader'
 
 import './styles.css'
-import Input from '../../components/Input/Input'
+import Input from '../../components/Input'
+import Textarea from '../../components/Textarea'
 import warningIcon from '../../assets/images/icons/warning.svg'
 
 const TeacherForm = () => {
@@ -21,6 +22,7 @@ const TeacherForm = () => {
           <Input name="name" label="Nome Completo" />
           <Input name="avatar" label="Avatar" />
           <Input name="whatsapp" label="WhatsApp" />
+          <Textarea name="bio" label="Biografia" />
         </fieldset>
 
         <fieldset>

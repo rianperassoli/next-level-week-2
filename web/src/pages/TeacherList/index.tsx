@@ -1,11 +1,10 @@
 import React from 'react'
 
-import PageHeader from '../../components/PageHeader'
-
 import './styles.css'
 
+import PageHeader from '../../components/PageHeader'
 import TeacherItem from '../../components/TeacherItem'
-import Input from '../../components/Input/Input'
+import Input from '../../components/Input'
 
 const TeacherList = () => {
   return (
