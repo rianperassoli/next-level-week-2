@@ -12,44 +12,51 @@ import giveClassesIcon from '../../assets/images/icons/give-classes.png'
 import heartIcon from '../../assets/images/icons/heart.png'
 
 function Landing() {
-	const { navigate } = useNavigation()
+  const { navigate } = useNavigation()
 
-	function handleNavigateToGiveClassesPage() {
-		navigate('GiveClasses')
-	}
+  function handleNavigateToGiveClassesPage() {
+    navigate('GiveClasses')
+  }
 
-	return (
-		<View style={styles.container}>
-			<Image source={landingImg} style={styles.banner} />
+  function handleNavigateStudyPage() {
+    navigate('Study')
+  }
 
-			<Text style={styles.title}>
-				Seja bem-vindo, {'\n'}
-				<Text style={styles.titleBold}>O que deseja fazer?</Text>
-			</Text>
+  return (
+    <View style={styles.container}>
+      <Image source={landingImg} style={styles.banner} />
 
-			<View style={styles.buttonsContainer}>
-				<RectButton style={[styles.button, styles.buttonPrimary]}>
-					<Image source={studyIcon}></Image>
+      <Text style={styles.title}>
+        Seja bem-vindo, {'\n'}
+        <Text style={styles.titleBold}>O que deseja fazer?</Text>
+      </Text>
 
-					<Text style={styles.buttonText}>Estudar</Text>
-				</RectButton>
+      <View style={styles.buttonsContainer}>
+        <RectButton
+          style={[styles.button, styles.buttonPrimary]}
+          onPress={handleNavigateStudyPage}
+        >
+          <Image source={studyIcon}></Image>
 
-				<RectButton
-					style={[styles.button, styles.buttonSecondary]}
-					onPress={handleNavigateToGiveClassesPage}
-				>
-					<Image source={giveClassesIcon}></Image>
+          <Text style={styles.buttonText}>Estudar</Text>
+        </RectButton>
 
-					<Text style={styles.buttonText}>Dar aulas</Text>
-				</RectButton>
-			</View>
+        <RectButton
+          style={[styles.button, styles.buttonSecondary]}
+          onPress={handleNavigateToGiveClassesPage}
+        >
+          <Image source={giveClassesIcon}></Image>
 
-			<Text style={styles.totalConnections}>
-				Total de 285 conexões já realizadas {' '}
-				<Image source={heartIcon}></Image>
-			</Text>
-		</View>
-	)
+          <Text style={styles.buttonText}>Dar aulas</Text>
+        </RectButton>
+      </View>
+
+      <Text style={styles.totalConnections}>
+        Total de 285 conexões já realizadas {' '}
+        <Image source={heartIcon}></Image>
+      </Text>
+    </View>
+  )
 }
 
 export default Landing
