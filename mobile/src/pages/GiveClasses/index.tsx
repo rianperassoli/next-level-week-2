@@ -4,9 +4,9 @@ import { Text, View, ImageBackground } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { RectButton } from 'react-native-gesture-handler'
 
-import styles from './styles'
-
 import giveClassesBGImg from '../../assets/images/give-classes-background.png'
+
+import styles from './styles'
 
 function GiveClasses() {
   const { goBack } = useNavigation()

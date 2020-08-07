@@ -6,41 +6,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#f0f0f7",
   },
 
-  content: {
-    flex: 1,
-    justifyContent: 'center',
+  teacherList: {
+    marginTop: -60,
   },
 
-  title: {
-    fontFamily: 'Archivo_700Bold',
-    color: "#FFF",
-    fontSize: 32,
-    lineHeight: 37,
-    maxWidth: 180
-  },
-
-  description: {
-    fontFamily: 'Poppins_400Regular',
-    marginTop: 24,
-    color: "#d4c2ff",
-    fontSize: 16,
-    lineHeight: 26,
-    maxWidth: 240
-  },
-
-  okButton: {
-    marginVertical: 40,
-    backgroundColor: '#04d361',
-    height: 58,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 8
-  },
-  okButtonText: {
-    color: '#FFF',
-    fontSize: 16,
-    fontFamily: 'Archivo_700Bold'
-  },
+  teacherListContent: {
+    paddingHorizontal: 16,
+    paddingBottom: 16
+  }
 })
 
 export default styles
