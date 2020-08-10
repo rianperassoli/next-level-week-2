@@ -2,12 +2,11 @@
 import React, { useState } from 'react'
 import { View, AsyncStorage } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import { useFocusEffect } from '@react-navigation/native'
 import PageHeader from '../../components/PageHeader'
-
 import TeacherItem, { Teacher } from '../../components/TeacherItem'
 
 import styles from './styles'
-import { useFocusEffect } from '@react-navigation/native'
 
 function Favorites() {
 

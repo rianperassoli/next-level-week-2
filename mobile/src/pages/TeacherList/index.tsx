@@ -4,12 +4,11 @@ import { View, Text, AsyncStorage } from 'react-native'
 import { ScrollView, TextInput, BorderlessButton, RectButton } from 'react-native-gesture-handler'
 import TeacherItem, { Teacher } from '../../components/TeacherItem'
 import { Feather } from '@expo/vector-icons'
-
+import api from '../../services/api'
+import { useFocusEffect } from '@react-navigation/native'
 import PageHeader from '../../components/PageHeader'
 
 import styles from './styles'
-import api from '../../services/api'
-import { useFocusEffect } from '@react-navigation/native'
 
 function TeacherList() {
 
