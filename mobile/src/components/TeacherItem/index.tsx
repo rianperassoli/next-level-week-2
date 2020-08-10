@@ -10,11 +10,21 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.png'
 
 import styles from './styles'
 
-interface TeacherItemProps {
-  title: string
+export interface Teacher {
+  id: number
+  avatar: string
+  bio: string
+  cost: number
+  name: string
+  subject: string
+  whatsapp: string
 }
 
-const TeacherItem: React.FC = () => {
+interface TeacherItemProps {
+  teacher: Teacher
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
   const { navigate } = useNavigation()
 
   function handleNavigateBack() {
@@ -27,22 +37,22 @@ const TeacherItem: React.FC = () => {
 
         <Image
           style={styles.avatar}
-          source={{ uri: 'https://github.com/diego3g.png' }}
+          source={{ uri: teacher.avatar }}
         />
 
         <View style={styles.profileInfo}>
-          <Text style={styles.name}>Diego Fernandes</Text>
-          <Text style={styles.subject}>Química</Text>
+          <Text style={styles.name}>{teacher.name}</Text>
+          <Text style={styles.subject}>{teacher.subject}</Text>
         </View>
 
       </View>
 
-      <Text style={styles.bio}>Diego Fernandes</Text>
+      <Text style={styles.bio}>{teacher.bio}</Text>
 
       <View style={styles.footer}>
         <Text style={styles.price}>
           Preço/hora {'  '}
-          <Text style={styles.priceValue}>R$20,00</Text>
+          <Text style={styles.priceValue}>R$ {teacher.cost}</Text>
         </Text>
 
         <View style={styles.buttonsContainer}>
