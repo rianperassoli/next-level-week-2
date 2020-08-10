@@ -9,6 +9,7 @@ import PageHeader from '../../components/PageHeader'
 
 import styles from './styles'
 import api from '../../services/api'
+import { useFocusEffect } from '@react-navigation/native'
 
 function TeacherList() {
 
@@ -31,6 +32,10 @@ function TeacherList() {
       }
     })
   }
+
+  useFocusEffect(() => {
+    loadFavorites()
+  })
 
   async function handleFiltersSubmit() {
     loadFavorites()
